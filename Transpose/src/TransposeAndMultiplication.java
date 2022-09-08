@@ -8,9 +8,20 @@ public class TransposeAndMultiplication {           //class name TransposeAndMul
    //initializing and declaring array of type "INT" with name "matrix"
 	int[][] matrix= {{1,2},{4,5},{8,9}};
 		
-    int i,j;
+    int i,j ,product=1;
     int[][] trans_matrix =  new int[2][3];    //Initializing another array of type "INT" with name Trans_matrix
-		
+	
+    for( i=0;i<matrix.length;i++)             //Using for loop for accessing matrix rows
+    {
+    	for( j=0;j<matrix.length;j++)         //Using for loop for accessing matrix columns
+    	{
+    	product=product*matrix[i][j];
+    	
+    	 
+    	}
+    	System.out.println("Product of matrix elements is: "+product); 
+    	}
+    
     for( i=0;i<matrix.length;i++)             //Using for loop for accessing matrix rows
     {
     	for( j=0;j<matrix.length;j++)         //Using for loop for accessing matrix columns
@@ -25,6 +36,7 @@ public class TransposeAndMultiplication {           //class name TransposeAndMul
     	System.out.println();                            //for change line after a row is completed
     
     }
+   
     
 	}
 
